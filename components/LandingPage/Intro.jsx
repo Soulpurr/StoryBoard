@@ -14,7 +14,7 @@ function Intro() {
         magic.
       </p>
       <p className="text-center text-sm md:text-xl font-semibold">
-        Welcome to the ultimate story board project! We're here to help you
+        Welcome to the ultimate story board project! We&apos;re here to help you
         unleash your creativity.
       </p>
       <p className="text-center font-semibold sm:block hidden">

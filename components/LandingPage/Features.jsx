@@ -11,8 +11,8 @@ function Features() {
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Customizable</div>
             <p className="text-gray-700">
-              Choose from a variety of genres, settings, and moods to customize
-              your story.
+              Choose from a variety of genres settings, and moods to customize
+              your story
             </p>
           </div>
         </div>
@@ -21,7 +21,7 @@ function Features() {
             <div className="font-bold text-xl mb-2">Dynamic</div>
             <p className="text-gray-700">
               Our AI creates a dynamic plot and intriguing characters tailored
-              to your story prompt.
+              to your story prompt
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ function Features() {
             <div className="font-bold text-xl mb-2">Realistic</div>
             <p className="text-gray-700">
               Enjoy realistic descriptions and lively dialogue that bring your
-              story to life.
+              story to life
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ function Features() {
             <div className="font-bold text-xl mb-2">Interactive</div>
             <p className="text-gray-700">
               Our interactive features make sure that your story is engaging and
-              keeps your readers on their toes.
+              keeps your readers on their toes
             </p>
           </div>
         </div>

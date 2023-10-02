@@ -12,7 +12,7 @@ function Info() {
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 ">Read Widely</div>
             <p className="text-colorful">
-              Read widely in your genre to find inspiration for your story.
+              Read widely in your genre to find inspiration for your story
             </p>
           </div>
         </div>
@@ -22,7 +22,7 @@ function Info() {
             <div className="font-bold text-xl mb-2 ">Take Notes</div>
             <p className="text-colorful">
               Write down your sparks of inspiration as they come to you. You
-              never know when a random idea might turn into a great story.
+              never know when a random idea might turn into a great story
             </p>
           </div>
         </div>
@@ -30,11 +30,11 @@ function Info() {
           <img className="w-full" src={"./book.jpg"} alt="Card" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 ">
-              Find Your Writer's Spot
+              Find Your Writers Spot
             </div>
             <p className="text-colorful">
-              Find your writer's spot, where you feel relaxed and inspired.
-              Whether it's a coffee shop, a park, or a desk, make it yours
+              Find your writers spot, where you feel relaxed and inspired.
+              Whether is a coffee shop a park or a desk make it yours
             </p>
           </div>
         </div>
