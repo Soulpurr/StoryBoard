@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Story from "@/models/Story";
 
 export default async function Page() {
   const data = await getData();
@@ -41,15 +42,11 @@ export default async function Page() {
 }
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/getStories`);
+  let res = await Story.find();
+  //const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/getStories`)
 
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
+  return res;
 }
