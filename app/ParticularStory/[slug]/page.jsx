@@ -11,7 +11,7 @@ export default function Page({ params }) {
   const [loading1, setloading1] = useState(false);
   const handleStory = async () => {
     setloading(true);
-    let res = await fetch(`http://localhost:3000/api/getStory/${params.slug}`);
+    let res = await fetch(`/api/getStory/${params.slug}`);
     let data = await res.json();
     setstory(data);
     setloading(false);
@@ -19,7 +19,7 @@ export default function Page({ params }) {
   const handlelike = async () => {
     setloading1(true);
     let res = await fetch(
-      `http://localhost:3000/api/likeStory/${params.slug}`,
+      `/api/likeStory/${params.slug}`,
       {
         method: "POST",
         headers: {

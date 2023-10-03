@@ -15,7 +15,7 @@ function SignUp() {
     console.log("Password:", password);
     // You can add API calls or other sign-up logic as needed
     try {
-      let res = await fetch("http://localhost:3000/api/addUser", {
+      let res = await fetch("/api/addUser", {
         method: "POST",
         body: JSON.stringify({
           username: username,

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 function LeaderBoard() {
   const [leaderboard, setleaderboard] = useState(null);
   const getData = async () => {
-    const res = await fetch("http://localhost:3000/api/getStories");
+    const res = await fetch("/api/getStories");
     const data = await res.json();
     data.sort((a, b) => b.upvotes.length - a.upvotes.length);
     setleaderboard(data);

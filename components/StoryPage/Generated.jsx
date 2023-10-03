@@ -6,7 +6,7 @@ function Generated({ generatedText, loading, description }) {
   const router = useRouter();
   const handlePublish = async () => {
     try {
-      let res = await fetch("http://localhost:3000/api/addStory", {
+      let res = await fetch("/api/addStory", {
         method: "POST",
         headers: {
           auth: getCookies("token").token,

@@ -13,7 +13,7 @@ function SignIn() {
     try {
       console.log("Email:", email);
       console.log("Password:", password);
-      let res = await fetch("http://localhost:3000/api/login", {
+      let res = await fetch("/api/login", {
         method: "POST",
         body: JSON.stringify({ email: email, password: password }),
       });

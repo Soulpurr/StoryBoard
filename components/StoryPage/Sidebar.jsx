@@ -2,14 +2,13 @@
 "use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ReactLoading from "react-loading"
+import ReactLoading from "react-loading";
 
-function Sidebar({ setText ,setLoad,setDesc}) {
+function Sidebar({ setText, setLoad, setDesc }) {
   const [loading, setloading] = useState(false);
   const [description, setDescription] = useState("");
   const [wordLimit, setWordLimit] = useState("");
   const [language, setLanguage] = useState("english");
- 
 
   const handleGenerate = async () => {
     // Add your generation logic here using the state values
@@ -19,30 +18,25 @@ function Sidebar({ setText ,setLoad,setDesc}) {
       url: "https://chatgpt-api8.p.rapidapi.com/",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "2855c36622msh68f62d244d30abcp1b56cajsn9f19e46825c3",
+        "X-RapidAPI-Key": `${process.env.NEXT_PUBLIC_API_KEY}`,
         "X-RapidAPI-Host": "chatgpt-api8.p.rapidapi.com",
       },
-      data: 
-        [
-          {
-            role: "user",
-            content: `"${description}" build me a story from this in ${wordLimit} words`,
-          },
-        ],
-      
+      data: [
+        {
+          role: "user",
+          content: `"${description}" build me a story from this in ${wordLimit} words`,
+        },
+      ],
     };
-    try{
-    const response = await axios.request(options);
-    console.log(response.data);
-    setLoad(false)
-    setText(response.data);
-    setDescription(description)
-    
-    }
-    catch(err){
-        console.log(err.message)
-        setLoad(false)
-
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setLoad(false);
+      setText(response.data);
+      setDescription(description);
+    } catch (err) {
+      console.log(err.message);
+      setLoad(false);
     }
   };
 
