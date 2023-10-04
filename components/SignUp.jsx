@@ -3,16 +3,16 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReactLoading from "react-loading";
 function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setloading] = useState(false);
 
   const handleSignUp = async () => {
     // Add your sign-up logic here
-    console.log("Username:", username);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    setloading(true);
     // You can add API calls or other sign-up logic as needed
     try {
       let res = await fetch("/api/addUser", {
@@ -35,6 +35,7 @@ function SignUp() {
         progress: undefined,
         theme: "light",
       });
+      setloading(false);
     } catch (error) {
       console.log(error);
       toast(`${error.message}`, {
@@ -47,6 +48,7 @@ function SignUp() {
         progress: undefined,
         theme: "light",
       });
+      setloading(false);
     }
   };
 
@@ -105,7 +107,7 @@ function SignUp() {
             required
           />
         </div>
-        <div className="mb-4 flex justify-center">
+        <div className="mb-4 flex justify-center items-center space-x-5">
           <button
             type="button"
             className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
@@ -113,6 +115,9 @@ function SignUp() {
           >
             Sign Up
           </button>
+          {loading && (
+            <ReactLoading color="red" type={"spin"} height={30} width={30} />
+          )}
         </div>
       </form>
     </div>
